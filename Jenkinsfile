@@ -42,5 +42,14 @@ pipeline {
                 '''
             }
         }
+
+        stage('Install Playwright Browser') {
+            steps {
+                sh '''
+                    echo "Installing Playwright Chromium"
+                    npx playwright install chromium
+                '''
+            }
+        }
     }
 }
