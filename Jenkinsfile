@@ -61,4 +61,19 @@ pipeline {
             }
         }
     }
+
+
+    post {
+        always {
+            junit (
+                testResults: 'test-results/junit.xml',
+                allowEmptyResults: true
+            )
+
+            archiveArtifacts(
+                artifacts: 'playwright-report/**',
+                allowEmptyArchive: true
+            )
+        }
+    }
 }
