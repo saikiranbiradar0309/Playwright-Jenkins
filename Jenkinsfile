@@ -51,5 +51,14 @@ pipeline {
                 '''
             }
         }
+
+        stage('Run Playwright Tests') {
+            steps {
+                sh '''
+                    echo "Running Playwright tests"
+                    npx playwright test --project=chromium
+                '''
+            }
+        }
     }
 }
