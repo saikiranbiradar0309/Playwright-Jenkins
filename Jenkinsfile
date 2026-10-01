@@ -33,5 +33,14 @@ pipeline {
                 '''
             }
         }
+
+        stage('Install Dependencies') {
+            steps {
+                sh '''
+                    echo "Installing dependencies"
+                    npm ci
+                '''
+            }
+        }
     }
 }
