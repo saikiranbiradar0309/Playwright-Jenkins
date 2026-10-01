@@ -74,6 +74,15 @@ pipeline {
                 artifacts: 'playwright-report/**',
                 allowEmptyArchive: true
             )
+
+            publishHTML(
+                reportName: 'Playwright HTML Report',
+                reportDir: 'playwright-report',
+                reportFiles: 'index.html',
+                alwaysLinkToLastBuild: true,
+                keepAll: true,
+                allowMissing: true  
+            )
         }
     }
 }
