@@ -1,10 +1,9 @@
 pipeline {
     agent any
-    /*
+
     environment {
-        PATH_NODE = '/Users/saikiranbiradar/.nvm/versions/node/v24.16.0/bin'
+        PATH+NODE = '/Users/saikiranbiradar/.nvm/versions/node/v24.16.0/bin'
     }
-    */
 
     stages{
         stage('Checkout') {
