@@ -2,7 +2,8 @@ pipeline {
     agent any
 
     environment {
-        PATH+NODE = '/Users/saikiranbiradar/.nvm/versions/node/v24.16.0/bin'
+        NODE_HOME = '/Users/saikiranbiradar/.nvm/versions/node/v24.16.0/bin'
+        PATH = "/Users/saikiranbiradar/.nvm/versions/node/v24.16.0/bin:${PATH}"
     }
 
     stages{
