@@ -7,5 +7,17 @@ pipeline {
                 checkout scm
             }
         }
+
+        stage('Check nodejs is installed') {
+            steps {
+                sh '''
+                    echo "Checking Nodejs Version"
+                    node -v
+
+                    echo "Checking npm version"
+                    npm -v
+                '''
+            }
+        }
     }
 }
